@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ton code perso après */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+>>>>>>> 8a14c7f (feat: configuration de talwind)
 
 @theme inline {
   --color-background: var(--background);
