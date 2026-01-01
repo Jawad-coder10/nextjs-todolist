@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Checkbox } from '@/src/components/ui/checkbox'
 import { MoreVertical } from 'lucide-react'
 import { Card } from '../ui/card';
+import { Button } from '../ui/button';
 
 interface Item {
   title: string;
@@ -29,29 +30,14 @@ export default function Section({ items }: SectionProps) {
 
   return (
     <div className='p-6'>
-       <Card className="flex justify-end gap-7 mb-6 w-72">
-      <button
-        className={`px-6 py-2 rounded-lg font-medium ${
-          active === "active"
-            ? "bg-slate-300 font-semibold"
-            : "bg-white text-gray-800"
-        }`}
-        onClick={() => setActive("active")}
-      >
-        Active Task
-      </button>
-      <button
-        className={`px-6 py-2 rounded-lg font-medium ${
-          active === "completed"
-            ? "bg-slate-300 font-semibold"
-            : "bg-white text-gray-800"
-        }`}
-        onClick={() => setActive("completed")}
-      >
-        Completed
-      </button>
-    </Card>
-
+       <Card className="flex justify-end gap-14 mb-6 w-72">
+          <Button className={`px-6 py-2 rounded-lg font-medium ${ active === "active" ? "bg-slate-300 font-semibold" : "bg-white text-gray-800" }`} 
+            onClick={() => setActive("active")} > Active Task 
+          </Button> 
+          <Button className={`px-6 py-2 rounded-lg font-medium ${ active === "completed" ? "bg-slate-300 font-semibold" : "bg-white text-gray-800" }`} 
+            onClick={() => setActive("completed")} > Completed 
+          </Button>
+        </Card>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {items.map((item, index) => (
           <div

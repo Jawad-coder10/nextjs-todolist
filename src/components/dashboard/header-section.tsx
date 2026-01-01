@@ -3,18 +3,21 @@ import React from 'react'
 import { IoMdNotifications } from 'react-icons/io'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
+import Image from 'next/image';
 
-export default function Page() {
+export default function HeaderSection() {
   return (
     <>
         <div className='flex items-center justify-between mb-6 mt-4'>
             <h1 className='text-2xl font-semibold'>Todo List</h1>
             <div className='flex items-center gap-5'>
                 <IoMdNotifications size={24} />
-                <img 
-                    src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80" 
-                    alt="Profile" 
-                    className='w-8 h-8 rounded-full object-cover'
+                <Image
+                    src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+                    alt="Profile"
+                    width={32}   // équivalent à w-8 (8 * 4px = 32px)
+                    height={32}  // équivalent à h-8
+                    className="rounded-full object-cover"
                 />
             </div>
         </div>

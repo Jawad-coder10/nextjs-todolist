@@ -36,7 +36,7 @@ export default function Header() {
       </div>
       <div className='flex flex-col items-center justify-center text-center py-32 gap-3 pt-38'>
         <h1 className='text-8xl font-bold'>To Do List</h1>
-        <Link className='rounded-full bg-orange-600 w-123 h-30 pb-2 px-2 text-white font-bold text-8xl' href='/download'>Optimizer</Link>
+        <Link className='rounded-full bg-orange-600 w-123 h-30 pb-5 px-10 text-white font-bold text-8xl' href='/download'>Optimizer</Link>
         <p className='text-sm text-gray-600 '>
           This platform can determine the importance of your tasks,
            allowing you to be<br />

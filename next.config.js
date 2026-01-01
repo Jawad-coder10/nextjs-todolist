@@ -4,6 +4,9 @@ const nextConfig = {
   experimental: {
     turbo: false,
   },
+   images: {
+    domains: ['images.unsplash.com'],
+  },
 
   // Force Webpack au build et au dev
   webpack: (config) => {
