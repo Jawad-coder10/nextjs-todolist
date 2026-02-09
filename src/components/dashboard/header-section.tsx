@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown, Plus, Search } from 'lucide-react'
+import { FiChevronDown, FiPlus, FiSearch } from 'react-icons/fi'
 import { IoMdNotifications } from 'react-icons/io'
 import { useRouter } from 'next/navigation'
 import { Card } from '../ui/card'
@@ -49,11 +49,11 @@ export default function HeaderSection({
             </div>
             <Card className='flex items-center justify-between mb-6 mt-4 px-3 w-full h-16'>
                 <div className='flex items-center gap-2'>
-                    <h1 className='text-xl font-semibold'>{today}</h1> <ChevronDown size={20} />
+                    <h1 className='text-xl font-semibold'>{today}</h1> <FiChevronDown size={20} />
                 </div>
                 <div className='flex items-center gap-5'>
                     <div className="relative w-full flex items-center gap-5">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                        <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                         <input
                             type="text"
                             placeholder={searchPlaceholder} className="w-45 h-10 pl-10 pr-4 py-1 border border-gray-300 rounded-lg
@@ -61,7 +61,7 @@ export default function HeaderSection({
                         transition-all duration-200"
                         />
                         <Button variant="outline" size="sm" className='bg-blue-700 text-white hover:bg-blue-900 mr-3 h-10' onClick={handleAddNewList}>
-                            <Plus />
+                            <FiPlus />
                             {buttonLabel}</Button>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import environment from '@/src/config/environment.config';
 import { TodoListDto, TodoListReqDto } from '@/src/models/todolist.model';
 import axios from 'axios';
+import type { AxiosError } from 'axios';
 
 const {
     api: {
@@ -40,12 +41,14 @@ export const getTodoListById = async (
 ): Promise<TodoListDto | null> =>
     axios
         .get<TodoListDto>(`${apiUrl}/${id}`)
-        .then((res) => {
-            return res.data;
-        })
-        .catch((error) => {
-            console.error('Erreur getTodoListById:', error);
-            return null;
+        .then((res) => res.data)
+        .catch((error: AxiosError) => {
+            if (error?.response?.status === 404) {
+                return null; // not found
+            }
+            const err = error?.response?.data || error.message;
+            console.error('Erreur getTodoListById:', err);
+            throw error;
         });
 
 export const createTodoList = async (
