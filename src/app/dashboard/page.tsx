@@ -1,6 +1,6 @@
-import HeaderSection from '@/src/components/dashboard/header-section'
-import Section from '@/src/components/dashboard/section'
+import HeaderSection from '@/components/dashboard/header-section';
 import { data } from './data';
+import Section from '@/components/dashboard/section';
 
 export default function DashboardPage() {
   return (

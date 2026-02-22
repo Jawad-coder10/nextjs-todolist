@@ -1,3 +1,8 @@
+"use client";
+
+import React from 'react'
+import { AppSidebar } from '@/components/app-sidebar';
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 
 export default function DashboardLayout({
   children,
@@ -5,8 +10,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className='mb-10 px-6'>
-        {children}
-    </div>
-  );
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset className='mb-10 px-6'>{children}</SidebarInset>
+    </SidebarProvider>
+  )
 }

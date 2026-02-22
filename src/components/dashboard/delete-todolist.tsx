@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
-import { ROUTES } from '@/src/utils/route'
+import { ROUTES } from '@/utils/route'
 import { getTodoListById, deleteTodoList } from '@/src/lib/services/todolist.service'
 
 interface DeleteTodolistProps {

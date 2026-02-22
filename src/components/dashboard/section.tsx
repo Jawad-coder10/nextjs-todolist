@@ -1,12 +1,12 @@
 'use client'
 import React, { useEffect, useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { Checkbox } from '@/src/components/ui/checkbox'
 import { FiMoreVertical, FiTrash2, FiEdit } from 'react-icons/fi'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
-import { getTodoLists } from '@/src/lib/services/todolist.service'
-import { ROUTES } from '@/src/utils/route'
+import { getTodoLists } from '@/lib/services/todolist.service'
+import { ROUTES } from '@/utils/route'
+import { Checkbox } from '../ui/checkbox'
 
 type TodoListDto = {
   id: number
@@ -25,7 +25,7 @@ interface SectionProps {
   editMenuLabel: string
   deleteMenuLabel: string
   confirmDeleteTitle: string
-  confirmDeleteDescriptionTemplate: string 
+  confirmDeleteDescriptionTemplate: string
   confirmDeleteCancelLabel: string
   confirmDeleteConfirmLabel: string
   confirmDeleteConfirmLoadingLabel: string
@@ -152,7 +152,7 @@ export default function Section({
                         <FiTrash2 className='w-4 h-4 text-red-600' />
                         <span className='text-sm text-gray-700'>{deleteMenuLabel}</span>
                       </button>
-                    </div>  
+                    </div>
                   )}
                 </div>
               </div>

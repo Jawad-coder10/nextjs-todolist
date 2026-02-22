@@ -1,5 +1,5 @@
-import environment from '@/src/config/environment.config';
-import { TodoListDto, TodoListReqDto } from '@/src/models/todolist.model';
+import environment from '@/config/environment.config';
+import { TodoListDto, TodoListReqDto } from '@/models/todolist.model';
 import axios from 'axios';
 import type { AxiosError } from 'axios';
 

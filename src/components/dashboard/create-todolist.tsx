@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import { FiChevronLeft } from 'react-icons/fi'
-import { ROUTES } from '@/src/utils/route'
-import { createTodoList } from '@/src/lib/services/todolist.service'
+import { ROUTES } from '@/utils/route'
+import { createTodoList } from '@/lib/services/todolist.service'
 
 interface CreateTodolistProps {
     pageTitle: string;

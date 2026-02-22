@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import { FiChevronLeft } from 'react-icons/fi'
-import { ROUTES } from '@/src/utils/route'
+import { ROUTES } from '@/utils/route'
 import { getTodoListById, updateTodoList } from '@/src/lib/services/todolist.service'
 
 interface EditTodolistProps {

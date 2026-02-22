@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import Image from 'next/image'
-import { ROUTES } from '@/src/utils/route'
+import { ROUTES } from '@/utils/route'
 
 interface HeaderSectionProps {
     title: string;
