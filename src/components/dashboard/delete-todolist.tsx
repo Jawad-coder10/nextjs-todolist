@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import { ROUTES } from '@/utils/route'
-import { getTodoListById, deleteTodoList } from '@/src/lib/services/todolist.service'
+import { getTodoListById, deleteTodoList } from '@/lib/services/todolist.service'
 
 interface DeleteTodolistProps {
     id: number

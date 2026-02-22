@@ -1,5 +1,5 @@
 import React from 'react'
-import DeleteTodolistPage from '@/src/components/dashboard/delete-todolist'
+import DeleteTodolistPage from '@/components/dashboard/delete-todolist'
 
 export default async function DeletePage({ params }: { params: Promise<{ id: string }> }) {
     const { id: idParam } = await params

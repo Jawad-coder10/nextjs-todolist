@@ -6,7 +6,7 @@ import { Card } from '../ui/card'
 import { Button } from '../ui/button'
 import { FiChevronLeft } from 'react-icons/fi'
 import { ROUTES } from '@/utils/route'
-import { getTodoListById, updateTodoList } from '@/src/lib/services/todolist.service'
+import { getTodoListById, updateTodoList } from '@/lib/services/todolist.service'
 
 interface EditTodolistProps {
     id: number

@@ -1,5 +1,5 @@
+import EditTodolistPage from '@/components/dashboard/edit-todolist'
 import React from 'react'
-import EditTodolistPage from '@/src/components/dashboard/edit-todolist'
 
 export default async function EditPage({ params }: { params: Promise<{ id: string }> }) {
     const { id: idParam } = await params
